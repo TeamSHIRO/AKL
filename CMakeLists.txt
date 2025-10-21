@@ -6,3 +6,5 @@ project(AKL
         HOMEPAGE_URL https://github.com/TeamSHIRO/AKL
         LANGUAGES CXX
 )
+
+add_executable(AKL Blank.cpp)
