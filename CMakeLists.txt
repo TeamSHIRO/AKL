@@ -7,4 +7,4 @@ project(AKL
         LANGUAGES CXX
 )
 
-add_executable(AKL Blank.cpp)
+add_executable(AKL src/dummy.cpp)
