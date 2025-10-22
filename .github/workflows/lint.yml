@@ -17,11 +17,12 @@ jobs:
       - name: Check out Git repository
         uses: actions/checkout@v4
 
-      - name: Install LLVM and Clang
-        uses: KyleMayes/install-llvm-action@v2
+      - name: Install clang-tidy and clang-format
+        uses: awalsh128/cache-apt-pkgs-action@latest
         with:
-          version: "19"
-          env: true
+          packages: clang-tidy clang-format
+          version: 1.0
+          execute_install_scripts: true
 
       - name: Set up CMake and Ninja
         uses: lukka/get-cmake@latest
