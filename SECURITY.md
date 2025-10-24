@@ -15,10 +15,10 @@ vulnerability." [Learn more about GitHub's private reporting process](https://do
 
 **What to Expect After Reporting:**
 
-* We will acknowledge receipt of your report typically within **3–7 days**
+* We will acknowledge receipt of your report typically within **1–5 days**
 * We will investigate the vulnerability promptly.
 * We will keep you informed of our progress and the estimated timeline for a fix.
-* We ask that you allow us a reasonable time (e.g., 3–7 days, depending on severity) to address the vulnerability
+* We ask that you allow us a reasonable time (e.g., 1–30 days, depending on severity) to address the vulnerability
   before public disclosure. We will work with you on a coordinated disclosure plan.
 
 **Please DO NOT open a public GitHub issue for security vulnerabilities.**
