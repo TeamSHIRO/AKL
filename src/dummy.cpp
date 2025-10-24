@@ -2,5 +2,4 @@
 
 #include "dummy.hpp"
 
-int main() {
-}
+int main() {}
