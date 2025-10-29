@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# SPDX-FileCopyrightText: 2025 TheMonHub
-#
-# SPDX-License-Identifier: LicenseRef-Apache-2.0-NoModNotice
-
 cd "$(dirname "$0")"
 mkdir -p clang_tidy_build
 cmake -S .. -B clang_tidy_build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -G Ninja

@@ -1,12 +1,11 @@
-# SPDX-FileCopyrightText: 2025 TheMonHub
-#
+# Copyright (C) 2025 TheMonHub
 # SPDX-License-Identifier: LicenseRef-Apache-2.0-NoModNotice
 
 cmake_minimum_required(VERSION 3.29 FATAL_ERROR)
 
 project(AKL
         VERSION 0.1.0
-        DESCRIPTION "A modern linker for !SHIRO's format."
+        DESCRIPTION "A linker for !SHIRO's format."
         HOMEPAGE_URL https://github.com/TeamSHIRO/AKL
         LANGUAGES CXX
 )
