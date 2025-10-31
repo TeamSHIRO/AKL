@@ -25,7 +25,7 @@ If you're ready to dive into the codebase and submit new features or bug fixes, 
 ### Overview
 
 #### Internal Contributors (!SHIRO Members)
-If you’re part of the !SHIRO GitHub organization, you can work directly on the repository:
+If you’re part of the !SHIRO GitHub organization and have the privilege to do so, you can work directly on the repository:
 1. Create a new branch from `develop`.
 2. Implement your feature or fix in a feature/* branch.
 3. Open a Pull Request (PR) back into `develop`.
@@ -107,15 +107,29 @@ To maintain consistency and readability across the codebase, please adhere to th
 * **File Naming:** All source and header files (`.hpp`, `.cpp`, `.h`, `.c`) must use **`snake_case`** for their names (
   e.g., `my_awesome_module.hpp`, `bootloader.cpp`).
 
-* **File Headers (Copyright & License):** Every new or modified source file should begin with the SPDX license header.
+* **File Headers (Copyright & License):** Each source file must begin with a short file description header explaining its purpose and key details.
+    For example:
+    ```cpp
+    /*
+     * File: main.c
+     * Description: Entry point for the process initialization.
+     */
+    ```
+
+    You should also include an SPDX license identifier at the top of the file:
+
     ```
     SPDX-License-Identifier: LicenseRef-Apache-2.0-NoModNotice
     ```
-    You should put your copyright notice in the header too, for example:
+    
+    Optionally, you may include a copyright notice:
+
     ```
-    Copyright (C) 2025 TheMonHub
+    Copyright (C) Year YourName
     ```
-    This is not required.
+    Note: You don't need to format copyright notice exactly like this example.
+  
+    The file description is required, while the license and copyright headers are optional but recommended for clarity and attribution.
 
 * **Header Guards:** To prevent multiple inclusions, all header files (`.hpp`) must use include guards. The naming
   convention for these guards should follow the pattern:
