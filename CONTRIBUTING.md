@@ -4,6 +4,7 @@ We welcome contributions from the community! Whether you're fixing a bug, adding
 
 ## Table of Contents
 
+- [Terminology](#terminology)
 - [Code of Conduct](#code-of-conduct)
 - [Contributing Guide 101](#contributing-guide-101)
   - [Overview](#overview)
@@ -19,11 +20,13 @@ We welcome contributions from the community! Whether you're fixing a bug, adding
   repository.
 * **External Contributor:** A contributor who is not part of the !SHIRO GitHub organization.
 * **Maintainer:** A member of the !SHIRO GitHub organization who has the privilege to merge pull requests.
-* **Source file:** A file that contains source code. This includes files with the following extensions: `.hpp`, `.cpp`, `.h`, `.c`.
+* **Source file:** A file that contains source code, Including headers. This includes but not limited to files with the
+  following extensions: `.hpp`, `.cpp`, `.h`, `.c`. Build scripts are not considered source files
+  (e.g., `CMakeLists.txt`, `something.cmake`).
 
 ## Code of Conduct
 
-Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in
+Please note that this project is released with a [**Contributor Code of Conduct**](CODE_OF_CONDUCT.md). By participating in
 this project, you agree to abide by its terms.
 
 
@@ -109,6 +112,8 @@ git config --global user.email "Your Email"
 ```
 You can omit the `--global` flag to use the configuration only for the current repository.
 
+---
+
 ### Style Guide
 
 This project uses the [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html). Please follow the guidelines when contributing.
@@ -130,21 +135,21 @@ To maintain consistency and readability across the codebase, please adhere to th
      */
     ```
 
-    You should also include an SPDX license identifier at the top of the source file:
+    You should also include an SPDX license identifier at the top of any file using comments:
 
     ```
     SPDX-License-Identifier: LicenseRef-Apache-2.0-NoModNotice
     ```
     
-    Optionally, you may include a copyright notice alongside it:
+    Optionally, you may include a copyright notice at the top of any file using comments:
 
     ```
     Copyright (C) Year YourName
     ```
     Note: You don't need to format a copyright notice exactly like this example.
   
-    The file description is required, while the license and copyright headers are optional but recommended for clarity
-    and attribution.
+    The file description is required for source files, while the license and copyright headers are optional but
+    recommended for clarity and attribution.
 
 * **Header Guards:** To prevent multiple inclusions, all header files (`.hpp`) must use include guards. The naming
   convention for these guards should follow the pattern:
@@ -162,6 +167,7 @@ To maintain consistency and readability across the codebase, please adhere to th
 
         #endif // SHIRO_COMMON_HPP
         ```
+      **All definitions should be UPPERCASE.**
 
 * **Commenting:** Do not be afraid to comment. Comments are a great way to explain your code and help others understand
   your code. Comments should be in a place where they are useful and not redundant. **Do not** comment self-explanatory
@@ -170,14 +176,25 @@ To maintain consistency and readability across the codebase, please adhere to th
     * Explain why a particular piece of code is written the way it is.
     * Breakdown and explain how certain parts of the code work.
     * Personal notes and thoughts.
-        * Please ensure your comments are complying with [CODE OF CONDUCT](CODE_OF_CONDUCT.md) and are
+        * Please ensure your comments are complying with [**CODE OF CONDUCT**](CODE_OF_CONDUCT.md) and are
           appropriate for the project. Avoid discriminatory or offensive comments.
 
 * **Naming Conventions:** Function names should be in `PascalCase` (e.g., `MyAwesomeFunction`).
       under any normal circumstances. An exception to this rule is when the function is a getter or setter. In this
       case, the function name should be in `snake_case` (e.g., `get_my_awesome_variable`).
 
-* **Tabs vs. Spaces:** Use 2 spaces for indentation in source files. Do not use tabs. Exclude CMake files from this rule.
+* **Tabs vs. Spaces:** Use spaces for indentation in files. Do not use tabs. See [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html) for more details.
 
 Clang-tidy does not automatically check and correct function names convention. Please ensure that all
 function names are adhering to the above conventions.
+
+### Pull Request Checklist
+
+To ensure that your pull request is accepted, please ensure that you have completed the following:
+- [ ] Your code follows the style guide outlined above.
+- [ ] You have signed the Developer Certificate of Origin (DCO) for all your commits.
+- [ ] You have run clang-format and clang-tidy on your code, and it passes all checks.
+
+---
+
+Thanks for contributing!
