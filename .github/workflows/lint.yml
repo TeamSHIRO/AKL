@@ -20,7 +20,7 @@ jobs:
       - name: Install clang-tidy and clang-format
         uses: awalsh128/cache-apt-pkgs-action@latest
         with:
-          packages: clang-tidy clang-format
+          packages: clang-tidy-20 clang-format-20
           version: 1.0
           execute_install_scripts: true
 
