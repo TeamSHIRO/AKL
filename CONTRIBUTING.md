@@ -21,8 +21,8 @@ We welcome contributions from the community! Whether you're fixing a bug, adding
 * **External Contributor:** A contributor who is not part of the !SHIRO GitHub organization.
 * **Maintainer:** A member of the !SHIRO GitHub organization who has the privilege to merge pull requests.
 * **Source file:** A file that contains source code, Including headers. This includes but not limited to files with the
-  following extensions: `.hpp`, `.cpp`, `.h`, `.c`. Build scripts are not considered source files
-  (e.g., `CMakeLists.txt`, `something.cmake`).
+  following extensions: `.hpp`, `.cpp`, `.h`, `.c`. Build scripts or Shell scripts or any configuration files are **not** considered source files
+  (e.g., `CMakeLists.txt`, `something.cmake`, `do_something.sh`, `README.md`).
 
 ## Code of Conduct
 
@@ -125,30 +125,23 @@ To maintain consistency and readability across the codebase, please adhere to th
   e.g., `my_awesome_module.hpp`, `parser.cpp`).
 
 * **File Headers (Copyright & License):** Each source file must begin with a short file description header explaining
-    its purpose and key details.
-    For example:
-    ```cpp
+    its purpose and key details. The header must also include copyright information and the SPDX license identifier.
+    
+    Example C++ source file header:
+    ```c++
     /*
-     * File: main.c
-     * Description: Entry point for the process initialization.
+     * File: file.cpp
+     * Description: This is the description of the file.
+     *
+     * Copyright (C) [Year] [Your Full Name or Alias]
+     * SPDX-License-Identifier: Apache-2.0
      */
     ```
-
-    You should also include an SPDX license identifier at the top of any file using comments:
-
-    ```
-    SPDX-License-Identifier: LicenseRef-Apache-2.0-NoModNotice
-    ```
-    
-    Optionally, you may include a copyright notice at the top of any file using comments:
-
-    ```
-    Copyright (C) Year YourName
-    ```
-    Note: You don't need to format a copyright notice exactly like this example.
-  
-    The file description is required for source files, while the license and copyright headers are optional but
-    recommended for clarity and attribution.
+    The header must be formatted in this order. Any Source file submitted without a valid copyright notice will be rejected.
+    1. File
+    2. Description
+    3. Copyright Notice(s)
+    4. SPDX License Identifier
 
 * **Header Guards:** To prevent multiple inclusions, all header files (`.hpp`) must use include guards. The naming
   convention for these guards should follow the pattern:
@@ -166,7 +159,7 @@ To maintain consistency and readability across the codebase, please adhere to th
 
         #endif // SHIRO_COMMON_HPP
         ```
-      **All definitions should be UPPERCASE.**
+      **All definitions must be UPPERCASE.**
 
 * **Commenting:** Do not be afraid to comment. Comments are a great way to explain your code and help others understand
   your code. Comments should be in a place where they are useful and not redundant. **Do not** comment self-explanatory
