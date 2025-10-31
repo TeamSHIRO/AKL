@@ -118,7 +118,6 @@ You can omit the `--global` flag to use the configuration only for the current r
 
 This project uses the [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html). Please follow the guidelines when contributing.
 
----
 
 To maintain consistency and readability across the codebase, please adhere to the following conventions:
 
@@ -187,6 +186,8 @@ To maintain consistency and readability across the codebase, please adhere to th
 
 Clang-tidy does not automatically check and correct function names convention. Please ensure that all
 function names are adhering to the above conventions.
+
+---
 
 ### Pull Request Checklist
 

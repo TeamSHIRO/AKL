@@ -19,4 +19,4 @@ Empty because it didn't even work yet.
 Please read the [**CONTRIBUTING**](CONTRIBUTING.md) guide for details on how to contribute to this project.
 
 ## License
-**AKL** is licensed under Apache License 2.0 with **No Modification Notice Exception**. See the [**LICENSE**](LICENSE) file for more details.
+**AKL** is licensed under Apache License 2.0. See [**LICENSE**](LICENSE) and [**NOTICE**](NOTICE) for more details.

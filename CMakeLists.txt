@@ -1,6 +1,3 @@
-# Copyright (C) 2025 TheMonHub
-# SPDX-License-Identifier: LicenseRef-Apache-2.0-NoModNotice
-
 cmake_minimum_required(VERSION 3.29 FATAL_ERROR)
 
 project(AKL
