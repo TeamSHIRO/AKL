@@ -190,7 +190,7 @@ function names are adhering to the above conventions.
 
 ### Pull Request Checklist
 
-To ensure that your pull request is accepted, please ensure that you have completed the following:
+To ensure that your pull request is pass the checks, please ensure that you have completed the following:
 - [ ] Your code follows the style guide outlined above.
 - [ ] You have signed the Developer Certificate of Origin (DCO) for all your commits.
 - [ ] You have run clang-format and clang-tidy on your code, and it passes all checks.
