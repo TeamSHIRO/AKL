@@ -17,7 +17,6 @@ jobs:
       - name: Check out Git repository
         uses: actions/checkout@v4
 
-      # I have no idea why this works
       - name: Install clang-tidy and clang-format
         uses: awalsh128/cache-apt-pkgs-action@latest
         with:
