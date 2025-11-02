@@ -106,7 +106,6 @@ By making a contribution to this project, I certify that:
 Tips: You can use `git commit -s` to sign your commits.
 You can configure your git client to use your name and email with:
 ```shell
-DO NOT RUN WITHOUT MODIFICATION
 git config --global user.name "Your Name"
 git config --global user.email "Your Email"
 ```
@@ -159,7 +158,6 @@ To maintain consistency and readability across the codebase, please adhere to th
 
         #endif // SHIRO_COMMON_HPP
         ```
-      **All definitions must be UPPERCASE.**
 
 * **Commenting:** Do not be afraid to comment. Comments are a great way to explain your code and help others understand
   your code. Comments should be in a place where they are useful and not redundant. **Do not** comment self-explanatory
