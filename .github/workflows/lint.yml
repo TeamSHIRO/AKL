@@ -34,21 +34,16 @@ jobs:
       - name: Run Clang-Format
         run: |
           echo "Running clang-format..."
+          echo "clang-format detected: $(which clang-format)"
+          echo "---------------------------------------------------"
           ./automated/clang-format.sh
         shell: bash
 
       - name: Run Clang-Tidy
         run: |
           echo "Running clang-tidy..."
-          echo "---------------------------------------------------"
-          ./automated/clang-tidy.sh
-        shell: bash
-        shell: bash
-
-      - name: Run Clang-Tidy
-        run: |
-          echo "Running clang-tidy..."
-          echo $(which clang-tidy)
+          echo "clang-tidy detected: $(which clang-tidy)"
+          echo "run-clang-tidy detected: $(which run-clang-tidy)"
           echo "---------------------------------------------------"
           ./automated/clang-tidy.sh
         shell: bash
