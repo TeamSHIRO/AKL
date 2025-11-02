@@ -42,10 +42,10 @@ jobs:
         name: Restore Clang-Tidy from cache
         run: |
           echo "Restoring Clang-Tidy from cache..."
-          cp ~/.cache/clang-tidy /usr/bin/clang-tidy
-          cp ~/.cache/run-clang-tidy /usr/bin/run-clang-tidy
-          chmod +x /usr/bin/clang-tidy
-          chmod +x /usr/bin/run-clang-tidy
+          sudo cp ~/.cache/clang-tidy /usr/bin/clang-tidy
+          sudo cp ~/.cache/run-clang-tidy /usr/bin/run-clang-tidy
+          sudo chmod +x /usr/bin/clang-tidy
+          sudo chmod +x /usr/bin/run-clang-tidy
           echo "Cache restored."
 
       - name: Set up CMake and Ninja

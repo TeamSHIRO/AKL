@@ -41,8 +41,8 @@ jobs:
         name: Restore Clang-Format from cache
         run: |
           echo "Restoring Clang-Format from cache..."
-          cp ~/.cache/clang-format /usr/bin/clang-format
-          chmod +x /usr/bin/clang-format
+          sudo cp ~/.cache/clang-format /usr/bin/clang-format
+          sudo chmod +x /usr/bin/clang-format
           echo "Cache restored."
 
       - name: Run Clang-Format
