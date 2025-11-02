@@ -1,6 +1,8 @@
 # Contributing
 
-We welcome contributions from the community! AKL is a community-based project which mean contributions are accepted.
+We welcome contributions from the community!
+
+AKL is a community-driven project, and we actively welcome contributions. Your involvement is essential to our success.
 
 Whether you're fixing a bug, adding a new feature, or improving documentation, your help is appreciated. Here are some guidelines to get you started:
 
