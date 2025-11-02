@@ -40,7 +40,7 @@ If you're ready to dive into the codebase and submit new features or bug fixes, 
 
 ### Overview
 
-Git tags without `tag-` prefix are not allowed. Because it is reserved for release and other purpose.
+Git tags without `tag-` prefix are not allowed. Because it is reserved for release and other purposes.
 
 #### Internal Contributors (!SHIRO Members)
 If you’re part of the !SHIRO GitHub organization and have the privilege to do so, you can work directly on the

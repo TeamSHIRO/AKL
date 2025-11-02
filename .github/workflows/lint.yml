@@ -18,10 +18,38 @@ jobs:
       - name: Check out Git repository
         uses: actions/checkout@v4
 
-      - name: Install clang-tidy and clang-format
-        uses: eth-pkg/apt-deb-cache@v0.2.7
+      - name: Check for cached Clang-Format and Clang-Tidy
+        id: clang-cache
+        uses: actions/cache@v4
         with:
-          packages: 'clang-format clang-tidy'
+          path: ~/.cache
+          key: clang-cache
+
+      - if: ${{ steps.clang-cache.outputs.cache-hit != 'true' }}
+        name: Install Clang-Format and Clang-Tidy
+        run: |
+          echo "Installing Clang-Format and Clang-Tidy..."
+          sudo apt-get update
+          sudo apt-get install -y clang-format clang-tidy
+          echo "Copying binaries to cache..."
+          mkdir -p ~/.cache
+          cp /usr/bin/clang-format ~/.cache/clang-format
+          cp /usr/bin/clang-tidy ~/.cache/clang-tidy
+          cp /usr/bin/run-clang-tidy ~/.cache/run-clang-tidy
+          echo "Installation complete."
+        shell: bash
+
+      - if: ${{ steps.clang-cache.outputs.cache-hit == 'true' }}
+        name: Restore Clang-Format and Clang-Tidy from cache
+        run: |
+          echo "Restoring Clang-Format and Clang-Tidy from cache..."
+          cp ~/.cache/clang-format /usr/bin/clang-format
+          cp ~/.cache/clang-tidy /usr/bin/clang-tidy
+          cp ~/.cache/run-clang-tidy /usr/bin/run-clang-tidy
+          chmod +x /usr/bin/clang-format
+          chmod +x /usr/bin/clang-tidy
+          chmod +x /usr/bin/run-clang-tidy
+          echo "Cache restored."
 
       - name: Set up CMake and Ninja
         uses: lukka/get-cmake@latest
