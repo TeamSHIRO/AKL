@@ -8,7 +8,6 @@
 
 #include "exit.hpp"
 #include "output.hpp"
-#include "verbose.hpp"
 
 int main() {
   output::Log("Hello World!");
