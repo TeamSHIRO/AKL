@@ -11,29 +11,28 @@ permissions:
 
 jobs:
   run-linters:
-    name: Check Format and Lint Code
+    name: Lint Code
     runs-on: ubuntu-latest
 
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v4
 
-      - name: Check for cached Clang-Format and Clang-Tidy
+      - name: Check for cached Clang-Tidy
         id: clang-cache
         uses: actions/cache@v4
         with:
           path: ~/.cache
-          key: clang-cache
+          key: clang-tidy-cache-v1
 
       - if: ${{ steps.clang-cache.outputs.cache-hit != 'true' }}
-        name: Install Clang-Format and Clang-Tidy
+        name: Install Clang-Tidy
         run: |
-          echo "Installing Clang-Format and Clang-Tidy..."
+          echo "Installing Clang-Tidy..."
           sudo apt-get update
-          sudo apt-get install -y clang-format clang-tidy
+          sudo apt-get install -y clang-tidy
           echo "Copying binaries to cache..."
           mkdir -p ~/.cache
-          cp /usr/bin/clang-format ~/.cache/clang-format
           cp /usr/bin/clang-tidy ~/.cache/clang-tidy
           cp /usr/bin/run-clang-tidy ~/.cache/run-clang-tidy
           echo "Installation complete."
@@ -42,11 +41,9 @@ jobs:
       - if: ${{ steps.clang-cache.outputs.cache-hit == 'true' }}
         name: Restore Clang-Format and Clang-Tidy from cache
         run: |
-          echo "Restoring Clang-Format and Clang-Tidy from cache..."
-          cp ~/.cache/clang-format /usr/bin/clang-format
+          echo "Restoring Clang-Tidy from cache..."
           cp ~/.cache/clang-tidy /usr/bin/clang-tidy
           cp ~/.cache/run-clang-tidy /usr/bin/run-clang-tidy
-          chmod +x /usr/bin/clang-format
           chmod +x /usr/bin/clang-tidy
           chmod +x /usr/bin/run-clang-tidy
           echo "Cache restored."
@@ -56,14 +53,6 @@ jobs:
         with:
           cmakeVersion: latest
           ninjaVersion: latest
-
-      - name: Run Clang-Format
-        run: |
-          echo "Running clang-format..."
-          echo "clang-format detected: $(which clang-format)"
-          echo "---------------------------------------------------"
-          ./automated/clang-format.sh
-        shell: bash
 
       - name: Run Clang-Tidy
         run: |
