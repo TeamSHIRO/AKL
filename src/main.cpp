@@ -6,4 +6,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-int main() {}
+#include "exit.hpp"
+#include "output.hpp"
+
+int main() {
+  output::Log("Hello World!");
+  ExitProcess(0);
+}
