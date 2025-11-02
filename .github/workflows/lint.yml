@@ -39,7 +39,7 @@ jobs:
         shell: bash
 
       - if: ${{ steps.clang-cache.outputs.cache-hit == 'true' }}
-        name: Restore Clang-Format and Clang-Tidy from cache
+        name: Restore Clang-Tidy from cache
         run: |
           echo "Restoring Clang-Tidy from cache..."
           cp ~/.cache/clang-tidy /usr/bin/clang-tidy
@@ -57,8 +57,6 @@ jobs:
       - name: Run Clang-Tidy
         run: |
           echo "Running clang-tidy..."
-          echo "clang-tidy detected: $(which clang-tidy)"
-          echo "run-clang-tidy detected: $(which run-clang-tidy)"
           echo "---------------------------------------------------"
           ./automated/clang-tidy.sh
         shell: bash
