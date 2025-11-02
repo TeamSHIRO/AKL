@@ -1,6 +1,8 @@
 # Contributing
 
-We welcome contributions from the community! Whether you're fixing a bug, adding a new feature, or improving documentation, your help is appreciated. Here are some guidelines to get you started:
+We welcome contributions from the community! AKL is a community-based project which mean contributions are accepted.
+
+Whether you're fixing a bug, adding a new feature, or improving documentation, your help is appreciated. Here are some guidelines to get you started:
 
 ## Table of Contents
 
@@ -35,6 +37,8 @@ this project, you agree to abide by its terms.
 If you're ready to dive into the codebase and submit new features or bug fixes, this section is for you.
 
 ### Overview
+
+Git tags without prefix `tag-` is protected and can't be created or changed without a required permission.
 
 #### Internal Contributors (!SHIRO Members)
 If you’re part of the !SHIRO GitHub organization and have the privilege to do so, you can work directly on the
