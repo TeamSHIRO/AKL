@@ -9,7 +9,8 @@ Checks: "*,
         -llvm*,
         -zircon-*,
         google-*,
-        -modernize-use-trailing-return-type
+        -modernize-use-trailing-return-type,
+        -*-avoid-non-const-global-variables
 "
 WarningsAsErrors: '*'
 HeaderFilterRegex: '.*'

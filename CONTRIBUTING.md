@@ -122,6 +122,8 @@ To maintain consistency and readability across the codebase, please adhere to th
 
 * **File Naming:** All source and header files (`.hpp`, `.cpp`, `.h`, `.c`) must use **`snake_case`** for their names (
   e.g., `my_awesome_module.hpp`, `parser.cpp`).
+     *  C++ source files must end with the `.cpp` extension.
+     *  C++ header files must end with the `.hpp` extension.
 
 * **File Headers (Copyright & License):** Each source file must begin with a short file description header explaining
     its purpose and key details. The header must also include copyright information and the SPDX license identifier.
@@ -144,19 +146,19 @@ To maintain consistency and readability across the codebase, please adhere to th
 
 * **Header Guards:** To prevent multiple inclusions, all header files (`.hpp`) must use include guards. The naming
   convention for these guards should follow the pattern:
-  `SHIRO_FILENAME_EXTENSION`
+  AKL_FILENAME_EXTENSION`
 
-    * **Structure:** `SHIRO_` (prefix) `FILENAME_` (snake_case filename)
+    * **Structure:** `AKL_` (prefix) `FILENAME_` (snake_case filename)
       `EXTENSION` (e.g., `H`, `HPP`)
 
     * **Example for `common.hpp`:**
         ```cpp
-        #ifndef SHIRO_COMMON_HPP
-        #define SHIRO_COMMON_HPP
+        #ifndef AKL_COMMON_HPP
+        #define AKL_COMMON_HPP
 
         // ... file content ...
 
-        #endif // SHIRO_COMMON_HPP
+        #endif // AKL_COMMON_HPP
         ```
 
 * **Commenting:** Do not be afraid to comment. Comments are a great way to explain your code and help others understand
