@@ -21,8 +21,6 @@ jobs:
         uses: awalsh128/cache-apt-pkgs-action@latest
         with:
           packages: clang-tidy clang-format
-          version: 1.0
-          execute_install_scripts: true
 
       - name: Set up CMake and Ninja
         uses: lukka/get-cmake@latest
@@ -33,12 +31,15 @@ jobs:
       - name: Run Clang-Format
         run: |
           echo "Running clang-format..."
+          echo $(which clang-format)
+          echo "---------------------------------------------------"
           ./automated/clang-format.sh
         shell: bash
 
       - name: Run Clang-Tidy
         run: |
           echo "Running clang-tidy..."
+          echo $(which clang-tidy)
           echo "---------------------------------------------------"
           ./automated/clang-tidy.sh
         shell: bash
