@@ -19,9 +19,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install clang-tidy and clang-format
-        uses: tecolicom/actions-use-apt-tools@v1
+        uses: eth-pkg/apt-deb-cache@v0.2.7
         with:
-          tools: 'clang-format clang-tidy'
+          packages: 'clang-format clang-tidy'
 
       - name: Set up CMake and Ninja
         uses: lukka/get-cmake@latest
