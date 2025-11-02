@@ -17,7 +17,7 @@
 noreturn inline void ExitProcess(const int code) {
   static std::mutex exit_mutex;
   const std::scoped_lock lock(exit_mutex);
-  exit(code); // NOLINT(*-mt-unsafe)
+  exit(code);  // NOLINT(*-mt-unsafe)
 }
 
-#endif //AKL_EXIT_HPP
+#endif  //AKL_EXIT_HPP

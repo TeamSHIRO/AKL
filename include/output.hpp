@@ -26,12 +26,12 @@ void Log(T msg) {
 template <typename T>
 void Warn(T msg) {
   const std::scoped_lock lock(output_mutex);
-  std::cout << kOutputPrefix << "\033[33mwarning:\033[0m "  << msg;
+  std::cout << kOutputPrefix << "\033[33mwarning:\033[0m " << msg;
 }
 template <typename T>
 void Error(T msg, const int code = 0) {
   const std::scoped_lock lock(output_mutex);
-  std::cout << kOutputPrefix << "\033[31merror:\033[0m "  << msg;
+  std::cout << kOutputPrefix << "\033[31merror:\033[0m " << msg;
   if (code != 0) {
     ExitProcess(code);
   }

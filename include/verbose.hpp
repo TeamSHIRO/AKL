@@ -21,7 +21,7 @@
  */
 
 namespace verbose {
-inline int vness = 0; // please don't use this directly, you're not that dumb.
+inline int vness = 0;  // please don't use this directly, you're not that dumb.
 inline std::mutex v_mutex;
 inline int get_vness() {
   const std::scoped_lock lock(v_mutex);
@@ -40,6 +40,6 @@ void LogVerbose(T msg, const int v_level) {
     Log(msg);
   }
 }
-}
+}  // namespace output
 
-#endif //AKL_VERBOSE_HPP
+#endif  //AKL_VERBOSE_HPP
