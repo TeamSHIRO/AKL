@@ -2,5 +2,5 @@
 
 cd "$(dirname "$0")"/..
 mkdir -p "$(dirname "$0")"/clang_tidy_build
-cmake -S . -B "$(dirname "$0")"/clang_tidy_build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -G Ninja
-run-clang-tidy '^(?!.*(\.asm|\.asm.inc|_deps/))' -p "$(dirname "$0")"/clang_tidy_build -quiet
+cmake -S . -B "$(dirname "$0")"/clang_tidy_build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+run-clang-tidy '^(?!.*_deps/)(?=.*\.c(pp)?).*' -p "$(dirname "$0")"/clang_tidy_build -quiet

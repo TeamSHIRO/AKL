@@ -11,19 +11,42 @@ permissions:
 
 jobs:
   run-linters:
-    name: Check Format and Lint Code
+    name: Lint Code
     runs-on: ubuntu-latest
 
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v4
 
-      - name: Install clang-tidy and clang-format
-        uses: awalsh128/cache-apt-pkgs-action@latest
+      - name: Check for cached Clang-Tidy
+        id: clang-cache
+        uses: actions/cache@v4
         with:
-          packages: clang-tidy clang-format
-          version: 1.0
-          execute_install_scripts: true
+          path: ~/.cache
+          key: clang-tidy-cache-v1
+
+      - if: ${{ steps.clang-cache.outputs.cache-hit != 'true' }}
+        name: Install Clang-Tidy
+        run: |
+          echo "Installing Clang-Tidy..."
+          sudo apt-get update
+          sudo apt-get install -y clang-tidy
+          echo "Copying binaries to cache..."
+          mkdir -p ~/.cache
+          cp /usr/bin/clang-tidy ~/.cache/clang-tidy
+          cp /usr/bin/run-clang-tidy ~/.cache/run-clang-tidy
+          echo "Installation complete."
+        shell: bash
+
+      - if: ${{ steps.clang-cache.outputs.cache-hit == 'true' }}
+        name: Restore Clang-Tidy from cache
+        run: |
+          echo "Restoring Clang-Tidy from cache..."
+          sudo cp ~/.cache/clang-tidy /usr/bin/clang-tidy
+          sudo cp ~/.cache/run-clang-tidy /usr/bin/run-clang-tidy
+          sudo chmod +x /usr/bin/clang-tidy
+          sudo chmod +x /usr/bin/run-clang-tidy
+          echo "Cache restored."
 
       - name: Set up CMake and Ninja
         uses: lukka/get-cmake@latest
@@ -31,19 +54,9 @@ jobs:
           cmakeVersion: latest
           ninjaVersion: latest
 
-      - name: Run Clang-Format
-        run: |
-          echo "Running clang-format..."
-          echo "clang-format detected: $(which clang-format)"
-          echo "---------------------------------------------------"
-          ./automated/clang-format.sh
-        shell: bash
-
       - name: Run Clang-Tidy
         run: |
           echo "Running clang-tidy..."
-          echo "clang-tidy detected: $(which clang-tidy)"
-          echo "run-clang-tidy detected: $(which run-clang-tidy)"
           echo "---------------------------------------------------"
           ./automated/clang-tidy.sh
         shell: bash

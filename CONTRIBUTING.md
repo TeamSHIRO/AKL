@@ -1,6 +1,8 @@
-# Contributing
+# Contributing to AKL
 
-We welcome contributions from the community! AKL is a community-based project which mean contributions are accepted.
+We welcome contributions from the community!
+
+AKL is a community-driven project, and we actively welcome contributions. Your involvement is essential to our success.
 
 Whether you're fixing a bug, adding a new feature, or improving documentation, your help is appreciated. Here are some guidelines to get you started:
 
@@ -38,22 +40,22 @@ If you're ready to dive into the codebase and submit new features or bug fixes, 
 
 ### Overview
 
-Git tags without prefix `tag-` is protected and can't be created or changed without a required permission.
+Git tags without `tag-` prefix are not allowed. Because it is reserved for release and other purposes.
 
 #### Internal Contributors (!SHIRO Members)
 If you’re part of the !SHIRO GitHub organization and have the privilege to do so, you can work directly on the
 repository:
-1. Create a new branch from `develop`.
-2. Implement your feature or fix in a feature/* branch.
-3. Open a Pull Request (PR) back into `develop`.
+1. Create a new branch from `main`.
+2. Implement your feature or fix in your branch.
+3. Open a Pull Request (PR) back into `main`.
 4. Request a review from another team member before merging.
 
 #### External Contributors
 If you’re not part of !SHIRO, we still welcome your contributions!
 1. Fork the repository to your own account.
-2. Create a new branch in your fork (feature/*).
+2. Create a new branch in your fork from `main` branch.
 3. Commit and push your changes.
-4. Open a Pull Request from your fork’s branch into the main repo’s `develop` branch.
+4. Open a Pull Request from your fork’s branch into the main repo’s `main` branch.
 5. A maintainer will review your changes and provide feedback.
 
 ---
