@@ -6,15 +6,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#ifndef AKL_OUTPUT_HPP
-#define AKL_OUTPUT_HPP
+#ifndef AKL_LOG_HPP
+#define AKL_LOG_HPP
 
 #include <iostream>
 #include <mutex>
 
 #include "exit.hpp"
 
-namespace output {
+namespace log {
 inline std::mutex output_mutex;
 constexpr auto kOutputPrefix = "akl: ";
 
@@ -36,6 +36,6 @@ void Error(T msg, const int code = 0) {
     ExitProcess(code);
   }
 }
-}  // namespace output
+}  // namespace log
 
-#endif  //AKL_OUTPUT_HPP
+#endif  //AKL_LOG_HPP
