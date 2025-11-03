@@ -12,6 +12,7 @@ Whether you're fixing a bug, adding a new feature, or improving documentation, y
 - [Code of Conduct](#code-of-conduct)
 - [Contributing Guide 101](#contributing-guide-101)
   - [Overview](#overview)
+    - [Git tags](#git-tags)
     - [Internal Contributors (!SHIRO Members)](#internal-contributors-shiro-members)
     - [External Contributors](#external-contributors)
   - [Developer Certificate of Origin](#developer-certificate-of-origin)
@@ -40,7 +41,8 @@ If you're ready to dive into the codebase and submit new features or bug fixes, 
 
 ### Overview
 
-Git tags without `tag-` prefix are not allowed. Because it is reserved for release and other purposes.
+#### Git tags
+Git tags with `v` prefix are not allowed. Because it is reserved for release. Any other tag is allowed but please keep it to the minimum.
 
 #### Internal Contributors (!SHIRO Members)
 If you’re part of the !SHIRO GitHub organization and have the privilege to do so, you can work directly on the
