@@ -7,9 +7,9 @@
  */
 
 #include "exit.hpp"
-#include "output.hpp"
+#include "log.hpp"
 
 int main() {
-  output::Log("Hello World!");
+  log::Log("Hello World!");
   ExitProcess(0);
 }
