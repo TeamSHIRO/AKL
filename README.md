@@ -1,5 +1,5 @@
+![AKL banner](https://raw.githubusercontent.com/TeamSHIRO/.github/refs/heads/main/profile/akl.png)
 # AKL: A linker for !SHIRO's formats
-
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-3.0-0baaaa.svg)](CODE_OF_CONDUCT.md)
 [![GitHub license](https://img.shields.io/github/license/TeamSHIRO/AKL.svg)](LICENSE)
 [![GitHub contributors](https://img.shields.io/github/contributors/TeamSHIRO/AKL)](https://github.com/TeamSHIRO/AKL/graphs/contributors)
