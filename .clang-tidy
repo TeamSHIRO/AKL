@@ -59,7 +59,7 @@ CheckOptions:
   readability-identifier-naming.EnumConstantPrefix: 'k'
 
   # Macros
-  readability-identifier-naming.MacroCase: UPPER_CASE
+  readability-identifier-naming.MacroDefinitionCase: UPPER_CASE
 
   # Files
   readability-identifier-naming.FileCase: lower_case

@@ -31,9 +31,6 @@ inline int get_verbosity() {
 }
 template <const int level>
 void set_verbosity() {
-  static_assert(level >= 0, "Verbosity level cannot be negative");
-  static_assert(level < 3, "Verbosity level cannot be greater than 3");
-
   const std::scoped_lock lock(v_mutex);
   vness = level;
 }
