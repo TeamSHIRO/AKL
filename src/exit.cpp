@@ -1,6 +1,6 @@
 /*
  * File: exit.cpp
- * Description: define exit function
+ * Description: Define exit function
  *
  * Copyright (C) 2025 TheMonHub
  * SPDX-License-Identifier: Apache-2.0
