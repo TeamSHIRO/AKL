@@ -29,10 +29,10 @@ extern std::atomic<int> verbosity;
 namespace log {
 template <typename T>
 void LogVerbose(const T& msg, const int v_level) {
-  ASSERTM(v_level <= 3,
-          "Verbosity level requirement must be between 0 and 3; Function parameter: " +
+  ASSERTM(v_level <= 3 && v_level >= 0,
+          "Internal: Verbosity level requirement for logging must be between 0 and 3; Recieved parameter: " +
               std::to_string(v_level));
-  ASSERTM(verbose::verbosity <= 3,
+  ASSERTM(verbose::verbosity <= 3 && verbose::verbosity >= 0,
           "Current verbosity level must be between 0 and 3; Current: " +
               std::to_string(verbose::verbosity));
   if (v_level <= verbose::verbosity) {
