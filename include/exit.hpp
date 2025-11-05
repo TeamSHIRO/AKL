@@ -9,15 +9,6 @@
 #ifndef AKL_EXIT_HPP
 #define AKL_EXIT_HPP
 
-#include <stdnoreturn.h>
-
-#include <cstdlib>
-#include <mutex>
-
-noreturn inline void ExitProcess(const int code) {
-  static std::mutex exit_mutex;
-  const std::scoped_lock lock(exit_mutex);
-  exit(code);  // NOLINT(*-mt-unsafe)
-}
+_Noreturn void ExitProcess(int code = 0);
 
 #endif  //AKL_EXIT_HPP

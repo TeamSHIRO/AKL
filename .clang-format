@@ -2,4 +2,6 @@
 Language: Cpp
 BasedOnStyle: Google
 ReflowComments: false
+BreakStringLiterals: false
+PenaltyBreakOpenParenthesis: 10000000
 ...
