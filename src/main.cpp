@@ -6,12 +6,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#include "assert_helper.hpp"
 #include "exit.hpp"
 #include "log.hpp"
+#include "verbose.hpp"
 
 int main() {
-  ASSERTM(1 == 2, "Funny enough");
+  log::LogVerbose("Hello World!", 1);
   log::Log("Hello World!");
   ExitProcess(0);
 }

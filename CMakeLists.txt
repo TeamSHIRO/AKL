@@ -13,6 +13,8 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 set(AKL_COMMON_SOURCES
         src/main.cpp
+        src/verbose.cpp
+        src/exit.cpp
 )
 
 add_executable(AKL ${AKL_COMMON_SOURCES})

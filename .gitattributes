@@ -17,3 +17,6 @@ LICENSE text eol=lf working-tree-encoding=UTF-8
 NOTICE text eol=lf working-tree-encoding=UTF-8
 
 *.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary

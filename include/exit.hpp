@@ -11,13 +11,6 @@
 
 #include <stdnoreturn.h>
 
-#include <cstdlib>
-#include <mutex>
-
-noreturn inline void ExitProcess(const int code) {
-  static std::mutex exit_mutex;
-  const std::scoped_lock lock(exit_mutex);
-  exit(code);  // NOLINT(*-mt-unsafe)
-}
+noreturn void ExitProcess(int code = 0);
 
 #endif  //AKL_EXIT_HPP
