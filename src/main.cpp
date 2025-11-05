@@ -6,4 +6,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-int main() {}
+#include "exit.hpp"
+#include "input/cli.hpp"
+
+int main(const int argc, char** argv) {
+  cli::ParseCliInput(argc, argv);
+  ExitProcess(0);
+}

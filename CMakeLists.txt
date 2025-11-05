@@ -17,5 +17,9 @@ set(AKL_COMMON_SOURCES
         src/exit.cpp
 )
 
-add_executable(AKL ${AKL_COMMON_SOURCES})
+set(AKL_INPUT_SOURCES
+        src/input/cli.cpp
+)
+
+add_executable(AKL ${AKL_COMMON_SOURCES} ${AKL_INPUT_SOURCES})
 target_include_directories(AKL PRIVATE include)
