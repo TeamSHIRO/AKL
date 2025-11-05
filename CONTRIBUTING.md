@@ -184,8 +184,8 @@ To maintain consistency and readability across the codebase, please adhere to th
       case, the function name should be in `snake_case` (e.g., `get_my_awesome_variable`).
 
 * **Tabs vs. Spaces:** Use spaces for indentation in files. Do not use tabs. See [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html) for more details.
-* **Disable linting:** Always prefer `// NOLINTNEXTLINE(check-to-disable)` over `// NOLINT` to disable linting for a specific line.
-  Always prefer explictly disabling a specific check over disabling all checks for a line.
+* **Disable linting:** Always prefer `// NOLINTNEXTLINE(check-to-disable)` over `// NOLINT()` to disable linting for a specific line.
+  Always prefer explictly disabling a specific check over disabling all checks for a line. (`// NOLINTBEGIN` `// NOLINTEND` included and explict check disable also apply.)
 
 Clang-tidy does not automatically check and correct function names convention. Please ensure that all
 function names are adhering to the above conventions.
