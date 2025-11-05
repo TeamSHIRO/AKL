@@ -6,9 +6,4 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#include "exit.hpp"
-
-int main() {
-
-  ExitProcess(0);
-}
+int main() {}
