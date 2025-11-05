@@ -9,8 +9,6 @@
 #ifndef AKL_EXIT_HPP
 #define AKL_EXIT_HPP
 
-#include <stdnoreturn.h>
-
-noreturn void ExitProcess(int code = 0);
+_Noreturn void ExitProcess(int code = 0);
 
 #endif  //AKL_EXIT_HPP

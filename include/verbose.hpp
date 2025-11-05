@@ -30,13 +30,12 @@ namespace log {
 template <typename T>
 void LogVerbose(const T& msg, const int v_level) {
   ASSERTM(v_level <= 3,
-          "Verbosity level requirement must be between 0 and 3; Current: " +
+          "Verbosity level requirement must be between 0 and 3; Function parameter: " +
               std::to_string(v_level));
   ASSERTM(verbose::verbosity <= 3,
           "Current verbosity level must be between 0 and 3; Current: " +
               std::to_string(verbose::verbosity));
-
-  if (v_level >= verbose::verbosity) {
+  if (v_level <= verbose::verbosity) {
     Log(msg);
   }
 }

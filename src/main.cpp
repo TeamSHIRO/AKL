@@ -7,11 +7,8 @@
  */
 
 #include "exit.hpp"
-#include "log.hpp"
-#include "verbose.hpp"
 
 int main() {
-  log::LogVerbose("Hello World!", 1);
-  log::Log("Hello World!");
+
   ExitProcess(0);
 }
