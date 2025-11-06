@@ -17,6 +17,10 @@ A linker to link ELF object files into format defined by !SHIRO.
   - **In Development** - **ELF** object files
   - **In Development** - **MEX** - **M**inimal **EX**ecutable files
 
+## Features
+
+Empty here too.
+
 ## Usage
 Empty because it didn't even work yet.
 
