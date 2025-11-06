@@ -11,7 +11,6 @@
 #include <string>
 #include <vector>
 
-#include "log.hpp"
 #include "verbose.hpp"
 
 namespace cli {
