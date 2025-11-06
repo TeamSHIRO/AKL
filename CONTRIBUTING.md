@@ -65,12 +65,14 @@ Here are the steps to contribute to the project:
 ---
 
 ### Git Tags
-Git tags with `v` prefix are not allowed. Because it is reserved for release. Any other tag is allowed but please keep it to the minimum.
+Git tags with `v` prefix are not allowed. Because it is reserved for release. Any other tag is allowed, but please keep it to the minimum.
 
 ---
 
 ### Branching
 We recommend naming a branch to be descriptive of the feature or bug fix you are working on.
+
+Prefer `kabab-case` for branch names.
 
 ---
 
@@ -199,7 +201,7 @@ Here are the basics of Google C++ Style Guide plus additional guidelines:
 
 6. **Tabs vs. Spaces:** Use spaces for indentation in files. Do not use tabs. See [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html) for more details.
 7. **Disable linting:** Always prefer `// NOLINTNEXTLINE(check-to-disable)` over `// NOLINT()` to disable linting for a specific line.
-  Always prefer explictly disabling a specific check over disabling all checks for a line. (`// NOLINTBEGIN` `// NOLINTEND` included and explict check disable also apply.)
+  Always prefer explicitly disabling a specific check over disabling all checks for a line. (`// NOLINTBEGIN` `// NOLINTEND` included and explict check disable also apply.)
 
 Clang-tidy does not automatically check and correct function names convention. Please ensure that all
 function names are adhering to the above conventions.
