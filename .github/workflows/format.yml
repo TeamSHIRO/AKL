@@ -23,7 +23,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.cache
-          key: clang-format-cache-v1
+          key: clang-format-cache
 
       - if: ${{ steps.clang-cache.outputs.cache-hit != 'true' }}
         name: Install Clang-Format
