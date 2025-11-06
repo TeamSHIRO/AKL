@@ -7,6 +7,12 @@ project(AKL
         LANGUAGES CXX
 )
 
+# Begin Options
+
+option(INSTALL_AKL "Enable installation of AKL." ON)
+
+# End Options
+
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
