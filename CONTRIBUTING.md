@@ -1,5 +1,4 @@
 # Contributing to AKL
-
 We welcome contributions from the community!
 
 AKL is a community-driven project, and we actively welcome contributions. Your involvement is essential to our success.
@@ -7,58 +6,76 @@ AKL is a community-driven project, and we actively welcome contributions. Your i
 Whether you're fixing a bug, adding a new feature, or improving documentation, your help is appreciated. Here are some guidelines to get you started:
 
 ## Table of Contents
-
 - [Terminology](#terminology)
 - [Code of Conduct](#code-of-conduct)
 - [Contributing Guide 101](#contributing-guide-101)
-  - [Overview](#overview)
-    - [Git tags](#git-tags)
-    - [Internal Contributors (!SHIRO Members)](#internal-contributors-shiro-members)
-    - [External Contributors](#external-contributors)
+  - [Prerequisites](#prerequisites)
+  - [Contributing in a Nutshell](#contributing-in-a-nutshell)
+  - [Git tags](#git-tags)
+  - [Branching](#branching)
+  - [Commits](#commits)
   - [Developer Certificate of Origin](#developer-certificate-of-origin)
   - [Style Guide](#style-guide)
+  - [Pull Request Checklist](#pull-request-checklist)
+- [Thanks for Contributing!](#thanks-for-contributing)
 
 ## Terminology
+The following terms are used throughout this document.
 
 * **Contributor:** Anyone who submits a pull request to the project.
-* **Internal Contributor:** A member of the !SHIRO GitHub organization who has the privilege to directly work on the 
-  repository.
-* **External Contributor:** A contributor who is not part of the !SHIRO GitHub organization.
 * **Maintainer:** A member of the !SHIRO GitHub organization who has the privilege to merge pull requests.
 * **Source file:** A file that contains source code, Including headers. This includes but not limited to files with the
   following extensions: `.hpp`, `.cpp`, `.h`, `.c`. Build scripts or Shell scripts or any configuration files are **not** considered source files
   (e.g., `CMakeLists.txt`, `something.cmake`, `do_something.sh`, `README.md`).
 
 ## Code of Conduct
-
 Please note that this project is released with a [**Contributor Code of Conduct**](CODE_OF_CONDUCT.md). By participating in
 this project, you agree to abide by its terms.
 
 
 ## Contributing Guide 101
-
 If you're ready to dive into the codebase and submit new features or bug fixes, this section is for you.
 
-### Overview
+These guides assume that you have a basic understanding of Git, GitHub, and C++ development tools.
 
-#### Git tags
+---
+
+### Prerequisites
+Please look at the [`BUILDING`](README.md#prerequisites) section in the [README](README.md). To submit a pull request, you must have
+a **GitHub** account.
+
+Additionally, you might need these tools to run the checks:
+- clang-format
+- clang-tidy (assuming it bundled with `run-clang-tidy`)
+
+There are no explicit version requirements; however, you should ensure that every configuration works with your current tool version.
+
+Please make sure all the above tools are locatable from your shell with `which` and is in `PATH` for the scripts inside [`automated/`](automated) to work properly.
+
+---
+
+### Contributing in a Nutshell
+Here are the steps to contribute to the project:
+1. If you didn't have write access to the repository, fork the repository to your own account.
+2. Create a new branch from `main`.
+3. Implement your feature or fix in your branch.
+4. Open a Pull Request (PR) back into `main`.
+5. The maintainer will review your changes and provide feedback.
+
+---
+
+### Git Tags
 Git tags with `v` prefix are not allowed. Because it is reserved for release. Any other tag is allowed but please keep it to the minimum.
 
-#### Internal Contributors (!SHIRO Members)
-If you’re part of the !SHIRO GitHub organization and have the privilege to do so, you can work directly on the
-repository:
-1. Create a new branch from `main`.
-2. Implement your feature or fix in your branch.
-3. Open a Pull Request (PR) back into `main`.
-4. Request a review from another team member before merging.
+---
 
-#### External Contributors
-If you’re not part of !SHIRO, we still welcome your contributions!
-1. Fork the repository to your own account.
-2. Create a new branch in your fork from `main` branch.
-3. Commit and push your changes.
-4. Open a Pull Request from your fork’s branch into the main repo’s `main` branch.
-5. A maintainer will review your changes and provide feedback.
+### Branching
+We recommend naming a branch to be descriptive of the feature or bug fix you are working on.
+
+---
+
+### Commits
+Please make sure your commit messages are not overly verbose and are concise.
 
 ---
 
@@ -67,7 +84,7 @@ By contributing to this project, you agree that your contributions will be licen
 you have the right to make those contributions. Please ensure you sign the Developer Certificate of Origin (DCO) by
 adding a "Signed-off-by" line to your commit messages.
 
-```
+```text
 Developer Certificate of Origin
 Version 1.1
 
@@ -107,8 +124,6 @@ By making a contribution to this project, I certify that:
     this project or the open source license(s) involved.
 ```
 
----
-
 **Any unsigned commits will be rejected during the PR process.**
 
 Tips: You can use `git commit -s` to sign your commits.
@@ -122,18 +137,17 @@ You can omit the `--global` flag to use the configuration only for the current r
 ---
 
 ### Style Guide
-
 This project uses the [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html). Please follow the guidelines when contributing.
 
 
-To maintain consistency and readability across the codebase, please adhere to the following conventions:
+Here are the basics of Google C++ Style Guide plus additional guidelines:
 
-* **File Naming:** All source and header files (`.hpp`, `.cpp`, `.h`, `.c`) must use **`snake_case`** for their names (
+1. **File Naming:** All source and header files (`.hpp`, `.cpp`, `.h`, `.c`) must use **`snake_case`** for their names (
   e.g., `my_awesome_module.hpp`, `parser.cpp`).
      *  C++ source files must end with the `.cpp` extension.
      *  C++ header files must end with the `.hpp` extension.
 
-* **File Headers (Copyright & License):** Each source file must begin with a short file description header explaining
+2. **File Headers (Copyright & License):** Each source file must begin with a short file description header explaining
     its purpose and key details. The header must also include copyright information and the SPDX license identifier.
     
     Example C++ source file header:
@@ -152,7 +166,7 @@ To maintain consistency and readability across the codebase, please adhere to th
     3. Copyright Notice(s)
     4. SPDX License Identifier
 
-* **Header Guards:** To prevent multiple inclusions, all header files (`.hpp`) must use include guards. The naming
+3. **Header Guards:** To prevent multiple inclusions, all header files (`.hpp`) must use include guards. The naming
   convention for these guards should follow the pattern:
   AKL_FILENAME_EXTENSION`
 
@@ -160,7 +174,7 @@ To maintain consistency and readability across the codebase, please adhere to th
       `EXTENSION` (e.g., `H`, `HPP`)
 
     * **Example for `common.hpp`:**
-        ```cpp
+        ```c++
         #ifndef AKL_COMMON_HPP
         #define AKL_COMMON_HPP
 
@@ -169,7 +183,7 @@ To maintain consistency and readability across the codebase, please adhere to th
         #endif // AKL_COMMON_HPP
         ```
 
-* **Commenting:** Do not be afraid to comment. Comments are a great way to explain your code and help others understand
+4. **Commenting:** Do not be afraid to comment. Comments are a great way to explain your code and help others understand
   your code. Comments should be in a place where they are useful and not redundant. **Do not** comment self-explanatory
   code. Feel free to comment on anything but keep it concise and not cluttered. This includes but is not limited
   to:
@@ -179,12 +193,12 @@ To maintain consistency and readability across the codebase, please adhere to th
         * Please ensure your comments are complying with [**CODE OF CONDUCT**](CODE_OF_CONDUCT.md) and are
           appropriate for the project. Avoid discriminatory or offensive comments.
 
-* **Naming Conventions:** Function names should be in `PascalCase` (e.g., `MyAwesomeFunction`).
+5. **Naming Conventions:** Function names should be in `PascalCase` (e.g., `MyAwesomeFunction`).
       under any normal circumstances. An exception to this rule is when the function is a getter or setter. In this
       case, the function name should be in `snake_case` (e.g., `get_my_awesome_variable`).
 
-* **Tabs vs. Spaces:** Use spaces for indentation in files. Do not use tabs. See [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html) for more details.
-* **Disable linting:** Always prefer `// NOLINTNEXTLINE(check-to-disable)` over `// NOLINT()` to disable linting for a specific line.
+6. **Tabs vs. Spaces:** Use spaces for indentation in files. Do not use tabs. See [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html) for more details.
+7. **Disable linting:** Always prefer `// NOLINTNEXTLINE(check-to-disable)` over `// NOLINT()` to disable linting for a specific line.
   Always prefer explictly disabling a specific check over disabling all checks for a line. (`// NOLINTBEGIN` `// NOLINTEND` included and explict check disable also apply.)
 
 Clang-tidy does not automatically check and correct function names convention. Please ensure that all
@@ -193,7 +207,6 @@ function names are adhering to the above conventions.
 ---
 
 ### Pull Request Checklist
-
 To ensure that your pull request is pass the checks, please ensure that you have completed the following:
 - [ ] Your code follows the style guide outlined above.
 - [ ] You have signed the Developer Certificate of Origin (DCO) for all your commits.
@@ -201,4 +214,5 @@ To ensure that your pull request is pass the checks, please ensure that you have
 
 ---
 
-Thanks for contributing!
+## Thanks for Contributing!
+Thanks for contributing to AKL! We look forward to your contributions.
