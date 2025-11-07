@@ -11,5 +11,9 @@
 #include <atomic>
 
 namespace verbose {
+#ifndef NDEBUG
+std::atomic<int> verbosity = 3;
+#else
 std::atomic<int> verbosity = 0;
+#endif
 }  // namespace verbose

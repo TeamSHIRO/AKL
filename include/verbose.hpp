@@ -10,7 +10,6 @@
 #define AKL_VERBOSE_HPP
 
 #include <atomic>
-#include <string>
 
 #include "assert_helper.hpp"
 #include "log.hpp"
