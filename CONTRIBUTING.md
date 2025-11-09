@@ -6,18 +6,18 @@ AKL is a community-driven project, and we actively welcome contributions. Your i
 Whether you're fixing a bug, adding a new feature, or improving documentation, your help is appreciated. Here are some guidelines to get you started:
 
 ## Table of Contents
-- [Terminology](#terminology)
-- [Code of Conduct](#code-of-conduct)
-- [Contributing Guide 101](#contributing-guide-101)
-  - [Prerequisites](#prerequisites)
-  - [Contributing in a Nutshell](#contributing-in-a-nutshell)
-  - [Git tags](#git-tags)
-  - [Branching](#branching)
-  - [Commits](#commits)
-  - [Developer Certificate of Origin](#developer-certificate-of-origin)
-  - [Style Guide](#style-guide)
-  - [Pull Request Checklist](#pull-request-checklist)
-- [Thanks for Contributing!](#thanks-for-contributing)
+- [**Terminology**](#terminology)
+- [**Code of Conduct**](#code-of-conduct)
+- [**Contributing Guide 101**](#contributing-guide-101)
+  - [**Prerequisites**](#prerequisites)
+  - [**Contributing in a Nutshell**](#contributing-in-a-nutshell)
+  - [**Git tags**](#git-tags)
+  - [**Branching**](#branching)
+  - [**Commits**](#commits)
+  - [**Developer Certificate of Origin**](#developer-certificate-of-origin)
+  - [**Style Guide**](#style-guide)
+  - [**Pull Request Checklist**](#pull-request-checklist)
+- [**Thanks for Contributing!**](#thanks-for-contributing)
 
 ## Terminology
 The following terms are used throughout this document.
@@ -41,7 +41,7 @@ These guides assume that you have a basic understanding of Git, GitHub, and C++ 
 ---
 
 ### Prerequisites
-Please look at the [`BUILDING`](README.md#prerequisites) section in the [README](README.md). To submit a pull request, you must have
+Please look at the [**Building**](README.md#building) and [**Prerequisites**](README.md#prerequisites) section in the [**README**](README.md). To submit a pull request, you must have
 a **GitHub** account.
 
 Additionally, you might need these tools to run the checks:
@@ -139,7 +139,7 @@ You can omit the `--global` flag to use the configuration only for the current r
 ---
 
 ### Style Guide
-This project uses the [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html). Please follow the guidelines when contributing.
+This project uses the [**Google C++ Style Guide**](https://google.github.io/styleguide/cppguide.html). Please follow the guidelines when contributing.
 
 
 Here are the basics of Google C++ Style Guide plus additional guidelines:
@@ -199,7 +199,7 @@ Here are the basics of Google C++ Style Guide plus additional guidelines:
       under any normal circumstances. An exception to this rule is when the function is a getter or setter. In this
       case, the function name should be in `snake_case` (e.g., `get_my_awesome_variable`).
 
-6. **Tabs vs. Spaces:** Use spaces for indentation in files. Do not use tabs. See [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html) for more details.
+6. **Tabs vs. Spaces:** Use spaces for indentation in files. Do not use tabs. See [**Google C++ Style Guide**](https://google.github.io/styleguide/cppguide.html) for more details.
 7. **Disable linting:** Always prefer `// NOLINTNEXTLINE(check-to-disable)` over `// NOLINT()` to disable linting for a specific line.
   Always prefer explicitly disabling a specific check over disabling all checks for a line. (`// NOLINTBEGIN` `// NOLINTEND` included and explict check disable also apply.)
 
