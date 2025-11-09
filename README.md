@@ -14,8 +14,11 @@ A linker to link ELF object files into format defined by !SHIRO.
 ## Supported Formats
 - Input: ELF object files
 - Output:
-  - **In Development** - **ELF** object files
-  - **In Development** - **MEX** - **M**inimal **EX**ecutable files
+  - **ELF** object files
+  - **MEX** - **M**inimal **EX**ecutable files
+
+Check out [**!SHIRO's specifications**](https://github.com/TeamSHIRO/specifications) for more information regarding the
+!SHIRO's executable format.
 
 ## Features
 
@@ -25,6 +28,7 @@ Empty here too.
 Empty because it didn't even work yet.
 
 ## Building
+
 ### Prerequisites
 
 - A C++17 Compatible Compiler and Linker
@@ -42,7 +46,7 @@ To build the project, follow these steps:
    ```bash
    cd AKL
    ```
-3. Run CMake to configure the project. You may additionally add build options here (`-D`). You can find available options inside [CMakeLists.txt](CMakeLists.txt).
+3. Run CMake to configure the project. You may additionally add build options here (`-D`). You can find available options inside [**CMakeLists.txt**](CMakeLists.txt).
     ```bash
     cmake -S . -B build
     ```
@@ -65,7 +69,6 @@ Please read the [**CONTRIBUTING**](CONTRIBUTING.md) guide for details on how to 
 The **AKL** Project is licensed under Apache License 2.0.
 
 The full text of the Apache License 2.0 can be obtained at: http://www.apache.org/licenses/LICENSE-2.0
+or in the [**LICENSE**](LICENSE) file included in this repository.
 
-Or in the [LICENSE](LICENSE) file included in this repository.
-
-NOTICE file included in this repository can be found [here](NOTICE).
+NOTICE file included in this repository can be found [**here**](NOTICE).

@@ -4,7 +4,7 @@
 
 **Please report vulnerabilities via GitHub's private vulnerability reporting feature** by navigating to the
 "Security" tab of our GitHub repository and clicking "Report a
-vulnerability." [Learn more about GitHub's private reporting process](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability).
+vulnerability." [**Learn more about GitHub's private reporting process**](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability).
 
 **When reporting, please include the following information (as much detail as possible):**
 
