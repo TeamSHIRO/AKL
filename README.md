@@ -20,6 +20,10 @@ A linker to link ELF object files into format defined by !SHIRO.
 Check out [**!SHIRO's specifications**](https://github.com/TeamSHIRO/specifications) for more information regarding the
 !SHIRO's executable format.
 
+## Features
+
+Empty here too.
+
 ## Usage
 Empty because it didn't even work yet.
 
@@ -59,7 +63,7 @@ Please read the [**CONTRIBUTING**](CONTRIBUTING.md) guide for details on how to 
 
 ## License
 <a href="https://www.apache.org/">
-    <img src="https://www.apache.org/logos/originals/foundation.svg" alt="The Apache Software Foundation" style="float: right; width: 300px;">
+    <img src="https://www.apache.org/logos/originals/foundation.svg" alt="The Apache Software Foundation" align="right"; style="float: right; width: 400px;">
 </a>
 
 The **AKL** Project is licensed under Apache License 2.0.
